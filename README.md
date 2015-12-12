@@ -1,34 +1,42 @@
-![hexo-theme-apollo](https://cloud.githubusercontent.com/assets/9530963/11295742/8f3d451a-8fa8-11e5-90d2-397af60a992d.png)
+![yg-apollo](snapshot.png)
 
-## 安装
+This is a modified version of the [Apollo](https://github.com/pinggod/hexo-theme-apollo) theme for [Hexo](https://github.com/hexo/hexo)
 
-``` bash
-hexo init Blog 
-cd Blog 
+## Building
+To build the theme, make sure to install the NPM dependencies using `npm install` and then run `gulp`.
+
+```
 npm install
-npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync
-git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo
+gulp
 ```
 
-## 启用
+## Installing
+The suggested method for installing Hexo themes is to clone their repositories under the `themes/` folder of a Hexo website, but this causes a massive slow down on the startup time of the Hexo server because it tries to index everything under the theme's own `node_modules` folder.
 
-修改 `_config.yml` 的 `theme` 配置项为 `apollo`:
+My solution is to instead clone the theme repository into a whole separate folder (outside of the Hexo installation), place an empty folder with the theme's name under the `themes/` folder (in this case, `themes/yg-apollo`) and simply create symbolic links to the following files and folders:
 
-```yaml
-theme: apollo
-```
+*Folders*
+- `layout`
+- `source`
 
-## 更新
+*Files*
+- `_config.yml`
 
-``` bash
-cd themes/apollo 
-git pull
-```
+This ensures that Hexo indexes only the necessary files, allowing both Hexo's `hexo server` command and the theme's `gulp` (and their watchers) to run simultaneously, therefore speeding up the development process.
 
-## 自定义块
+Once the symbolic links are set up, simply edit your Hexo installation's `_config.yml` and set the `theme` parameter as `yg-apollo`.
 
-Markdown 生成的标签暂时比较简单，所以提供了一些 HTML 标签来标识特殊样式，详见 [custrom-blocks](https://github.com/pinggod/hexo-theme-apollo/blob/master/doc/custom-blocks.md)。
+## Added Features and Functionality
+- [404](layout/404.jade), [Archive](layout/archive.jade), [Tag](layout/tag.jade) and [Browse](layout/browse.jade) pages
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)-based icon support for main menu
+- An atom feed link in the footer
+- Tweet and Share buttons for Twitter and Facebook
+- Variable-based SASS rules
+- Reduced blank spaces and a larger content area (1080px wide as opposed to 700px)
+- Larger clickable areas for main menu items
+- Self-hosted fonts
+- English documentation and pagination handles
+- Optional [MathJax](https://mathjax.org/) support (as opposed to always-enabled)
 
 ## License
-
 MIT

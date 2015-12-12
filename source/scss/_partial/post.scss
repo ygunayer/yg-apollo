@@ -5,14 +5,40 @@
 .post-block {
     .post-title {
         margin: 0.65em 0;
-        color: #2c3e50;
+        color: $color-text-main;
         font-size: 1.5em;
     }
 
+    .post-tools {
+        float: right;
+    }
+
     .post-time {
-        color: #7f8c8d;
+        color: $color-text-flushed;
         margin: 1.2em 0;
     }
+}
+
+.sharing-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .sharing-list-item {
+        margin-left: .5em;
+        float: left;
+    }
+}
+
+.fb_iframe_widget {
+    span {
+        vertical-align: baseline !important;
+    }
+}
+    
+.sub-title {
+    display: block;
+    margin: -1.5em 0 0;
 }
 
 .post-content {
@@ -20,7 +46,7 @@
         position: relative;
         &:before {
             content: "#";
-            color: #42b983;
+            color: $color-highlight-main;
             position: absolute;
             left: -0.7em;
             top: -4px;
@@ -37,14 +63,15 @@
         font-size: 18px;
     }
     a {
-        color: #42b983;
+        color: $color-highlight-main;
     }
+
     blockquote {
         margin: 2em 0;
         padding-left: 20px;
-        border-left: 4px solid #42b983;
+        border-left: 4px solid $color-highlight-main;
     }
-    img {
+    img, video {
         display: block;
         max-width: 100%;
         margin: 1em auto;
@@ -77,6 +104,13 @@
         background-color: #f66;
         font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     }
+}
+
+.post-extras {
+    margin: 2em 0;
+    padding: 2em 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 code,
@@ -137,18 +171,18 @@ $signs: ("html", "js", "bash", "css", "scss", "diff", "java", "xml", "python");
 @include code-signs($signs);
 
 pre {
-    color: #525252;
+    color: $color-code-default;
     .function .keyword,
     .constant {
-       color: #0092db;
+       color: $color-code-constant;
     }
     .keyword,
     .attribute {
-        color: #e96900;
+        color: $color-code-attribute;
     }
     .number,
     .literal {
-        color: #ae81ff;
+        color: $color-code-number;
     }
     .tag,
     .tag .title,
@@ -159,19 +193,16 @@ pre {
     .clojure .built_in,
     .nginx .title,
     .tex .special {
-        color: #2973b7;
-    }
-    .class .title {
-        color: #fff;
+        color: $color-code-special;
     }
     .symbol,
     .symbol .string,
     .value,
     .regexp {
-        color: #42b983;
+        color: $color-highlight-main;
     }
     .title {
-        color: #83B917;
+        color: $color-code-title;
     }
     .tag .value,
     .string,
@@ -197,7 +228,7 @@ pre {
     .apache .cbracket,
     .tex .command,
     .prompt {
-        color: #42b983;
+        color: $color-highlight-main;
     }
     .comment,
     .java .annotation,
@@ -208,10 +239,10 @@ pre {
     .shebang,
     .apache .sqbracket,
     .tex .formula {
-        color: #b3b3b3;
+        color: $color-code-formula;
     }
     .deletion {
-        color: #BA4545;
+        color: $color-code-deletion;
     }
     .coffeescript .javascript,
     .javascript .xml,

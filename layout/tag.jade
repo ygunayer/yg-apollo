@@ -2,9 +2,9 @@ extends partial/layout
 
 block container
   include mixins/post
-  include mixins/paginator
+  h1 Articles tagged "#{page.tag}"
+  a(href=url_for('/browse#tags'), class='sub-title') See All Tags
   +posts()
-  +paginate_home()
 
 block footer
   include partial/footer

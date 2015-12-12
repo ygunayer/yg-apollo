@@ -1,5 +1,4 @@
 .home.post-list {
-    margin: 2em 0;
     .post-list-item {
         padding: 1em 0 2em;
         border-bottom: 1px solid #ddd;
@@ -15,6 +14,6 @@
         }
     }
     .read-more {     
-        color: #42b983;
+        color: $color-highlight-main;
     }
 }

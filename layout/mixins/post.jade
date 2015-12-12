@@ -1,27 +1,48 @@
-mixin postInfo(item)
-    .post-meta
-        .post-time
-            != full_date(item.date, 'll')
+mixin postInfo(item, options)
+  .post-meta
+    .post-tools
+        ul.sharing-list.clearfix
+          li.sharing-list-item
+            a(href=url_for(item.path) + '#comments')
+              span(class='disqus-comment-count', data-disqus-identifier=item.slug) Loading comments...
+          if options && options.showSharingInfo
+            li.sharing-list-item
+              div(class='fb-share-button', data-href=item.permalink, data-layout='button')
+            li.sharing-list-item
+              a(href='https://twitter.com/share?text=' + item.title, class='twitter-share-button', data-url=item.permalink, data-via='ygunayer')
+    .post-time
+      != full_date(item.date, 'll')
 
 mixin posts()
-    ul.home.post-list
-        - page.posts.each(function(item, index) {
-            li.post-list-item
-                article.post-block
-                    h2.post-title
-                        a.post-title-link(href= url_for(item.path))
-                            != item.title
-                    +postInfo( item )
-                    .post-content
-                        != item.excerpt
-                    a.read-more(href=item.path) ... more
-        - })
-
-mixin post(item)
-    .post
+  ul.home.post-list
+    - page.posts.each(function(item, index) {
+      li.post-list-item
         article.post-block
-            h1.post-title
-                != item.title
-            +postInfo(item)
-            .post-content
-                != item.content
+          h2.post-title
+            a.post-title-link(href=url_for(item.path))
+              != item.title
+          +postInfo(item)
+          .post-content
+            != item.excerpt
+          a.read-more(href=url_for(item.path)) Read More...
+    - })
+
+mixin post(item, options)
+  .post
+    article.post-block
+      h1.post-title
+        != item.title
+      if item.pageType != 'page'
+        +postInfo(item, options)
+      .post-content
+        != item.content
+      - var tagCount = page.tags && page.tags.length || 0
+      if tagCount > 0
+        aside.post-extras
+          div.tag-list
+            label Tags: 
+            - page.tags.each(function(tag, tagIdx) {
+              a(href=url_for(tag.path), class='tag-list-item') #{tag.name}
+              if tagIdx < tagCount - 1
+                != ', '
+            - })

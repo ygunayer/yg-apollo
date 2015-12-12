@@ -1,18 +1,44 @@
 menu:
-    博客: /
-    微博: http://weibo.com/sunchongsheng
-    rss: /atom.xml
-    github: https://github.com/pinggod
+  home:
+    title: Home
+    url: /
+  about:
+    title: About
+    url: /about
+  browse:
+    title: Browse
+    url: /browse
+  twitter:
+    title: Twitter
+    url: https://twitter.com/ygunayer
+    icon: fa fa-twitter
+  github:
+    title: Github
+    url: https://github.com/ygunayer
+    icon: fa fa-github
+  facebook:
+    title: Facebook
+    url: https://facebook.com/Yalin.Gunayer
+    icon: fa fa-facebook
+  linkedin:
+    title: LinkedIn
+    url: https://tr.linkedin.com/in/ygunayer
+    icon: fa fa-linkedin
+
 
 favicon: /favicon.png
 logo: /favicon.png
 
+mathjax: false
+
 # comment
 # e.g disqus: seansun
-disqus: 
+disqus: ygunayer
 duoshuo: 
 
 # google-analytics:
-ga: UA-65933410-1
+ga: UA-71307141-1
 # baidu-analytics:
-ba: //hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2
+ba: 
+
+twitter: 'ygunayer'

@@ -1,0 +1,22 @@
+extends partial/layout
+
+block container
+  include mixins/post
+  h2 Browse Articles
+  nav.grid-wrap
+    section.grid.one-third
+      h3(id='tags') By Tag
+      != list_tags({ orderby: 'length', order: -1 })
+    section.grid.one-third
+      h3(id='monthly') By Month
+      != list_archives()
+    section.grid.one-third
+      h3(id='yearly') By Year
+      != list_archives({ type: 'yearly' })
+
+block pagination
+  include mixins/paginator
+  +home()
+  
+block footer
+  include partial/footer

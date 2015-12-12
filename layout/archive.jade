@@ -1,0 +1,15 @@
+extends partial/layout
+
+block container
+  include mixins/post
+  if page.year
+    h2 Articles Posted in 
+      if page.month
+        | #{page.month}, 
+      | #{page.year}
+  else
+    h2 Archives
+  +posts()
+
+block footer
+  include partial/footer

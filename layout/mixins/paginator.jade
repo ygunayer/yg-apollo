@@ -1,25 +1,19 @@
-mixin home()
-    - var prev = page.prev_link
-    - var next = page.next_link
+mixin paginate_home()
+  - var prev = page.prev_link
+  - var next = page.next_link
+  if page.prev || page.next
     .paginator
-        if page.prev
-            a.prev(href=url_for(prev)) 上一页
-        else
-            a.prev 
-        if page.next
-            a.next(href=url_for(next)) 下一页
-        else
-            a.prev 
+      if page.next
+        a.next(href=url_for(next)) Next Page &#8594;
+      if page.prev
+        a.prev(href=url_for(prev)) &#8592; Previous Page
 
-mixin post()
-    - var prev = page.prev ? page.prev.path : false;
-    - var next = page.next ? page.next.path : false; 
+mixin paginate_post()
+  - var prev = page.prev ? page.prev.path : false;
+  - var next = page.next ? page.next.path : false; 
+  if prev || next
     .paginator
-        if prev
-            a.prev(href=url_for(prev)) 上一篇
-        else
-            a.prev 
-        if next
-            a.next(href=url_for(next)) 下一篇
-        else
-            a.prev 
+      if next
+        a.next(href=url_for(next)) #{page.next.title} &#8594;
+      if prev
+        a.prev(href=url_for(prev)) &#8592; #{page.prev.title}

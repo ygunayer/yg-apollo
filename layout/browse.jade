@@ -13,10 +13,6 @@ block container
     section.grid.one-third
       h3(id='yearly') By Year
       != list_archives({ type: 'yearly' })
-
-block pagination
-  include mixins/paginator
-  +home()
   
 block footer
   include partial/footer

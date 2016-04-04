@@ -33,11 +33,11 @@ mathjax: false
 
 # comment
 # e.g disqus: seansun
-disqus: ygunayer
+disqus: 
 duoshuo: 
 
 # google-analytics:
-ga: UA-71307141-1
+ga: 
 # baidu-analytics:
 ba: 
 

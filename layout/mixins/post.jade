@@ -1,15 +1,17 @@
 mixin postInfo(item, options)
   .post-meta
     .post-tools
-        ul.sharing-list.clearfix
-          li.sharing-list-item
-            a(href=url_for(item.path) + '#comments')
-              span(class='disqus-comment-count', data-disqus-identifier=item.slug) Loading comments...
-          if options && options.showSharingInfo
-            li.sharing-list-item
-              div(class='fb-share-button', data-href=item.permalink, data-layout='button')
-            li.sharing-list-item
-              a(href='https://twitter.com/share?text=' + item.title, class='twitter-share-button', data-url=item.permalink, data-via='ygunayer')
+        if (theme.disqus || (options && options.showSharingInfo))
+          ul.sharing-list.clearfix
+            if theme.disqus
+              li.sharing-list-item
+                a(href=url_for(item.path) + '#comments')
+                  span(class='disqus-comment-count', data-disqus-identifier=item.slug) Loading comments...
+            if options && options.showSharingInfo
+              li.sharing-list-item
+                a(href='javascript:void(0)', title='Share on Facebook', class='ssk ssk-facebook ssk-xs')
+              li.sharing-list-item
+                a(href='javascript:void(0)', title='Tweet', class='ssk ssk-twitter ssk-xs')
     .post-time
       != full_date(item.date, 'll')
 

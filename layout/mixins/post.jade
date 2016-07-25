@@ -5,7 +5,7 @@ mixin postInfo(item, options)
           ul.sharing-list.clearfix
             if theme.disqus
               li.sharing-list-item
-                a(href=url_for(item.path) + '#disqus_thread') Loading comments...
+                a(href=config.url + url_for(item.path) + '#disqus_thread') Loading comments...
             if options && options.showSharingInfo
               li.sharing-list-item
                 a(href='javascript:void(0)', title='Share on Facebook', class='ssk ssk-facebook ssk-xs')

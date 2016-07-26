@@ -1,16 +1,12 @@
 mixin postInfo(item, options)
   .post-meta
     .post-tools
-        if (theme.disqus || (options && options.showSharingInfo))
+        if (options && options.showSharingInfo)
           ul.sharing-list.clearfix
-            if theme.disqus
-              li.sharing-list-item
-                a(href=config.url + url_for(item.path) + '#disqus_thread') Loading comments...
-            if options && options.showSharingInfo
-              li.sharing-list-item
-                a(href='javascript:void(0)', title='Share on Facebook', class='ssk ssk-facebook ssk-xs')
-              li.sharing-list-item
-                a(href='javascript:void(0)', title='Tweet', class='ssk ssk-twitter ssk-xs')
+            li.sharing-list-item
+              a(href='javascript:void(0)', title='Share on Facebook', class='ssk ssk-facebook ssk-xs')
+            li.sharing-list-item
+              a(href='javascript:void(0)', title='Tweet', class='ssk ssk-twitter ssk-xs')
     .post-time
       != full_date(item.date, 'll')
 

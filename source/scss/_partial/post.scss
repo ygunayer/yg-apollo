@@ -52,6 +52,22 @@
             top: -4px;
             font-size: 1.2em;
             font-weight: bold;
+            opacity: 0;
+            transition: opacity .3s linear;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        .headerlink {
+            position: absolute;
+            left: -1em;
+            right: 0;
+            top: 0;
+            bottom: 0;
         }
     }
 

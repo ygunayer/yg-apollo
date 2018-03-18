@@ -1,6 +1,6 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
     return gulp.src('./source/scss/*.scss')
@@ -9,7 +9,9 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./source/css'));
 });
 
-gulp.task('default', ['sass'], function() {
+gulp.task('dev', [ 'sass' ], function() {
     gulp.watch('./source/scss/_partial/*.scss', ['sass']);
     gulp.watch('./source/scss/*.scss', ['sass']);
 });
+
+gulp.task('default', [ 'sass' ]);

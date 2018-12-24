@@ -1,6 +1,6 @@
 {
   "name": "yg-apollo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A modified version of hexo-theme-apollo, a hexo theme inspired by vuejs.org",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,8 @@
   "homepage": "https://github.com/ygunayer/yg-apollo/#readme",
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-autoprefixer": "5.0.0",
-    "gulp-sass": "3.1.0",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-sass": "4.0.2",
     "gulp-sourcemaps": "2.6.4"
   },
   "dependencies": {}

@@ -1,26 +1,26 @@
 {
-  "name": "hexo-theme-apollo",
-  "version": "0.1.0",
-  "description": "A hexo theme inspired by vuejs.org",
+  "name": "yg-apollo",
+  "version": "1.0.0",
+  "description": "A modified version of hexo-theme-apollo, a hexo theme inspired by vuejs.org",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinggod/hexo-theme-apollo"
+    "url": "https://github.com/ygunayer/yg-apollo/"
   },
   "keywords": [
     "hexo",
     "theme",
     "apollo"
   ],
-  "author": "Sean Sun",
+  "author": "Yalin Gunayer",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pinggod/hexo-theme-apollo/issues"
   },
-  "homepage": "https://github.com/pinggod/hexo-theme-apollo#readme",
+  "homepage": "https://github.com/ygunayer/yg-apollo/#readme",
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-autoprefixer": "5.0.0",

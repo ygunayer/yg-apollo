@@ -2,43 +2,15 @@ menu:
   home:
     title: Home
     url: /
-  about:
-    title: About
-    url: /about
-  browse:
-    title: Browse
-    url: /browse
-  twitter:
-    title: Twitter
-    url: https://twitter.com/ygunayer
-    icon: fa fa-twitter
-  github:
-    title: Github
-    url: https://github.com/ygunayer
-    icon: fa fa-github
-  facebook:
-    title: Facebook
-    url: https://facebook.com/Yalin.Gunayer
-    icon: fa fa-facebook
-  linkedin:
-    title: LinkedIn
-    url: https://tr.linkedin.com/in/ygunayer
-    icon: fa fa-linkedin
 
 
 favicon: /favicon.png
 logo: /favicon.png
 
-mathjax: false
-
-# comment
-# e.g disqus: seansun
-disqus: ygunayer
-duoshuo: 
-
-# google-analytics:
-ga: UA-71307141-1
-# baidu-analytics:
-ba: 
-
-twitter: 'ygunayer'
+mathjax:
+disqus:
+duoshuo:
+ga:
+ba:
+adsense: 
+twitter:

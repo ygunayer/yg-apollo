@@ -1,6 +1,5 @@
 - var ga = theme.ga
 - var ba = theme.ba
-- var adsense = theme.adsense
 - var mathjax = theme.mathjax
 
 if ga
@@ -18,10 +17,6 @@ if ba
 if mathjax
   script(src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
 
-script(src='/js/social-share-kit.min.js')
-script.
-  SocialShareKit.init()
-
 if theme.disqus
   script.
     var disqus_shortname = '#{theme.disqus}';
@@ -32,11 +27,3 @@ if theme.disqus
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
-
-if theme.adsense
-  script(src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", async=true)
-  script.
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "#{theme.adsense}",
-      enable_page_level_ads: true
-    });

@@ -1,12 +1,12 @@
 mixin postInfo(item, options)
   .post-meta
     .post-tools
-        if (options && options.showSharingInfo)
-          ul.sharing-list.clearfix
-            li.sharing-list-item
-              a(href='javascript:void(0)', title='Share on Facebook', class='ssk ssk-facebook ssk-xs')
-            li.sharing-list-item
-              a(href='javascript:void(0)', title='Tweet', class='ssk ssk-twitter ssk-xs')
+      if options && options.showSharingInfo
+        .post-links
+          if theme.github.repo
+            - var issueUrl = `https://github.com/${theme.github.repo}/issues/new?` + encodeURI(`title=About "${item.title}"&body=About [${item.title}](${item.path.replace(/\/$/g, '')}.md)...`)
+            a(href=issueUrl, target='_blank', title='Report an Error') Report an Error
+          a(href=url_for(item.path), title='Permalink') Permalink
     .post-time
       != full_date(item.date, 'll')
 

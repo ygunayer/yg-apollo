@@ -1,0 +1,34 @@
+header {
+    height: 60px;
+
+    .logo-link {
+        float: left;
+    }
+    
+    .nav {
+        float: right;
+        left: 80px;
+    }
+
+    .logo-link img {
+        height: 60px;
+    }
+
+    .nav-list-item {
+        display: inline-block;
+
+        a {
+            font-size: 16px;
+            line-height: 1.4;
+            padding: 20px 10px;
+        }
+
+        span {
+            padding-bottom: .25em;
+        }
+
+        .fa {
+            padding: .5em;
+        }
+    }
+}

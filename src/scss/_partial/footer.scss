@@ -1,0 +1,21 @@
+.paginator {
+    @extend .clearfix;
+    
+    margin: 2em 0;
+    .prev, .next {
+        display: inline-block;
+        vertical-align: top;
+        &:hover {
+            color: $color-highlight-main;
+        }
+    }
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.ds-thread,
+#disqus_thread {
+    margin-bottom: 2em;
+}

@@ -4,7 +4,7 @@
   "description": "A modified version of hexo-theme-apollo, a hexo theme inspired by vuejs.org",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production node build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,11 @@
   },
   "homepage": "https://github.com/ygunayer/yg-apollo/#readme",
   "devDependencies": {
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "6.0.0",
-    "gulp-sass": "4.0.2",
-    "gulp-sourcemaps": "2.6.4"
+    "browserslist": "4.12.0",
+    "caniuse-lite": "1.0.30001087",
+    "parcel-bundler": "1.12.4",
+    "rimraf": "3.0.2",
+    "sass": "1.26.9"
   },
   "dependencies": {}
 }

@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    color: $color-text-main;
+    font-size: $fontSize * 1px;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.clearfix {
+    *zoom: 1;
+
+    &:after, &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+ul.nav,
+ul.post-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    color: $color-text-main;
+    text-decoration: none;
+
+    &.secondary {
+        color: $color-highlight-secondary;
+    }
+    &.tertiary {
+        color: $color-highlight-tertiary;
+    }
+}
+
+a:active, a:hover {
+    color: lighten($color-text-main, 20%);
+}
+
+a.nav-list-link.active span,
+a.nav-list-link:hover span,
+a.post-title-link:hover {
+    border-bottom: 2px solid $color-highlight-main;
+}
+
+hr {
+    border: 0;
+}
+
+code {
+    margin: 0 2px;
+    padding: 3px 5px;
+    color: $color-highlight-secondary;
+    border-radius: 2px;
+    white-space: inherit;
+}
+
+table {
+    width: 100%;
+    thead {
+        background-color: #ddd;
+        th {
+            padding: 5px;
+        }
+    }
+    tbody {
+        tr:nth-child(2n) {
+            background-color: #eee;
+        }
+        td {
+            padding: 5px;
+        }
+    }
+}
+
+.page-404 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+// very lazy faux grid system
+.grid-wrap {
+    @extend .clearfix;
+
+    .grid {
+        float: left;
+
+        &.full { width: 100%; }
+        &.half { width: 50%; }
+        &.quarter { width: 25%; }
+        &.one-third { width: 33.333%; }
+        &.two-thirds { width: 66.667%; }
+    }
+}
+
+.footer-wrap {
+    @extend .clearfix;
+
+    aside {
+        float: right;
+        font-size: .833em;
+
+        a {
+            @extend .secondary;
+        }
+    }
+}
+
+.tag-list-count, .archive-list-count {
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 3px;
+    margin-left: .5em;
+    background-color: $color-background-light;
+    padding: 3px;
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1em;
+    vertical-align: middle;
+    text-align: center;
+}

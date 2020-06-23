@@ -1,0 +1,19 @@
+.home.post-list {
+    .post-list-item {
+        padding: 1em 0 2em;
+        border-bottom: 1px solid #ddd;
+    }
+    .post-content{
+        h2, h3, h4, h5, h6 {
+            &:before {
+                content: '';
+            }
+        }
+        & > ul {
+            list-style: initial;
+        }
+    }
+    .read-more {     
+        color: $color-highlight-main;
+    }
+}

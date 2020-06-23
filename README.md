@@ -1,3 +1,6 @@
+# DEPRECATION NOTICE
+This repo is now deprecated due to the fact that it has been been moved inside the parent repo, [ygunayer/ygcom2](https://github.com/ygunayer/ygcom2/tree/master/themes/yg-apollo).
+
 ![yg-apollo](snapshot.png)
 
 This is a modified version of the [Apollo](https://github.com/pinggod/hexo-theme-apollo) theme for [Hexo](https://github.com/hexo/hexo)
